@@ -1,16 +1,16 @@
-## EC2 Instance
-- g4dn.xlarge (T4 with 2056 CUDA cores, 40 SMs, 1024 max threads per SM, 1024 max threads per block)
-- Ubuntu 22.04, ami-0e001c9271cf7f3b9
-- 100 Gb root volume size
-- TCP ports 7000-9000 added to security group, in addition to ssh port 22
 
-## Azure Instance
+## Alternative: Azure Instance
 - Standard NC4as T4 v3 (4 vcpus, 28 GiB memory)
 - Ubuntu 22.04, 22_04-lts-gen2
 - 128 Gb Disk
 - TCP ports 7000-9000 added to security group, in addition to ssh port 22
 - Use Security Type == Standard and not Trusted Launch. Make sure 'Enable secure boot' and 'Enable vTPM' are unchecked.
 
+## Alternative: EC2 Instance
+- g4dn.xlarge (T4 with 2056 CUDA cores, 40 SMs, 1024 max threads per SM, 1024 max threads per block)
+- Ubuntu 22.04, ami-0e001c9271cf7f3b9
+- 100 Gb root volume size
+- TCP ports 7000-9000 added to security group, in addition to ssh port 22
 
 Connect to the instance using ssh.
 

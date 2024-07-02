@@ -10,7 +10,6 @@ git clone https://github.com/perbergman/ragtime.git
 
 Get neo4j RAG repo.
 ```shell
-cd
 git clone https://github.com/docker/genai-stack.git
 ```
 
@@ -41,9 +40,7 @@ vi .env
 
 Start the containers:
 ```shell
-cd genai-stack
 sudo mkdir data
 sudo chmod 777 data
 ./up.sh
 ```
-
