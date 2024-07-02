@@ -14,10 +14,11 @@ cd
 git clone https://github.com/docker/genai-stack.git
 ```
 
-Switch to the exact commit:
+Switch to the exact commit and apply a small UI patch.
 ```shell
 cd genai-stack
 git checkout 91917399c413a127fe048b5894a343018a50f98f
+git apply ../botpy.patch
 ```
 
 Copy the files from the ragtime repo to the genai-stack repo.
