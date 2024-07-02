@@ -1,0 +1,43 @@
+diff --git a/bot.py b/bot.py
+index 4146af0..f3fbe91 100644
+--- a/bot.py
++++ b/bot.py
+@@ -77,22 +77,23 @@ styl = f"""
+ st.markdown(styl, unsafe_allow_html=True)
+ 
+ 
++
+ def chat_input():
+-    user_input = st.chat_input("What coding issue can I help you resolve today?")
+-
+-    if user_input:
+-        with st.chat_message("user"):
+-            st.write(user_input)
+-        with st.chat_message("assistant"):
+-            st.caption(f"RAG: {name}")
+-            stream_handler = StreamHandler(st.empty())
+-            result = output_function(
+-                {"question": user_input, "chat_history": []}, callbacks=[stream_handler]
+-            )["answer"]
+-            output = result
+-            st.session_state[f"user_input"].append(user_input)
+-            st.session_state[f"generated"].append(output)
+-            st.session_state[f"rag_mode"].append(name)
++    with st.expander("Chat inside expander"):
++        user_input = st.chat_input("What coding issue can I help you resolve today?")
++        if user_input:
++            with st.chat_message("user"):
++                st.write(user_input)
++            with st.chat_message("assistant"):
++                st.caption(f"RAG: {name}")
++                stream_handler = StreamHandler(st.empty())
++                result = output_function(
++                    {"question": user_input, "chat_history": []}, callbacks=[stream_handler]
++                )["answer"]
++                output = result
++                st.session_state[f"user_input"].append(user_input)
++                st.session_state[f"generated"].append(output)
++                st.session_state[f"rag_mode"].append(name)
+ 
+ 
+ def display_chat():
