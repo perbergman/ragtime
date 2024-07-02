@@ -30,9 +30,9 @@ cp ragtime/config/down.sh genai-stack
 cp ragtime/config/up.sh genai-stack
 ```
 
-Edit the .env file:
-LANGCHAIN_API_KEY=TBD
-OPENAI_API_KEY=TBD
+Edit the .env file:  
+LANGCHAIN_API_KEY=TBD  
+OPENAI_API_KEY=TBD  
 
 ```shell
 cd genai-stack
