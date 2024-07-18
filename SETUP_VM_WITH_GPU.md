@@ -1,3 +1,6 @@
+# Setup virtual machine with T4 GPU
+
+Pick one of the alternatives and create the corresponding virtual machine
 
 ## Alternative: Azure Instance
 - Standard NC4as T4 v3 (4 vcpus, 28 GiB memory)
